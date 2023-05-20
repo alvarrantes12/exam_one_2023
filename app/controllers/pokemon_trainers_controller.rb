@@ -14,6 +14,7 @@ class PokemonTrainersController < ApplicationController
   def edit; end
 
   def create
+    
     @pokemon_trainer = PokemonTrainer.new(pokemon_trainer_params)
 
     if @pokemon_trainer.save
@@ -45,6 +46,6 @@ class PokemonTrainersController < ApplicationController
   end
 
   def pokemon_trainer_params
-    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number)
+    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number, :level)
   end
 end
