@@ -1,0 +1,25 @@
+%h1 Listing captured_pokemons
+
+%table
+  %thead
+    %tr
+      %th Location
+      %th Trainer
+      %th Pokemon
+      %th
+      %th
+      %th
+
+  %tbody
+    - @captured_pokemons.each do |captured_pokemon|
+      %tr
+        %td= captured_pokemon.location
+        %td= captured_pokemon.pokemon_trainer.full_name
+        %td= captured_pokemon.pokemon.name
+        %td= link_to 'Show', captured_pokemon
+        %td= link_to 'Edit', edit_captured_pokemon_path(captured_pokemon)
+        %td= link_to 'Destroy', captured_pokemon, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Captured pokemon', new_captured_pokemon_path

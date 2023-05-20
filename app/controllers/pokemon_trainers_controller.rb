@@ -18,6 +18,12 @@ class PokemonTrainersController < ApplicationController
 
     if @pokemon_trainer.save
       redirect_to pokemon_trainer_url(@pokemon_trainer), notice: t('activerecord.attributes.pokemon_trainer.created')
+      
+      response = HTTParty.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
+      pokemon_data = JSON.parse(response.body)['results'].sample
+      pokemon_name = pokemon_data['name']
+      @pokemon_trainer.pokemons.create(name: pokemon_name)
+
     else
       render :new, status: :unprocessable_entity
     end
