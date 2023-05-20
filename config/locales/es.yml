@@ -31,7 +31,7 @@ es:
         other: Entrenadores
     errors:
       models:
-        trainer:
+        pokemon_trainer:
           attributes:
             first_name:
               blank: vacío
