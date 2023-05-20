@@ -1,2 +1,67 @@
 es:
-  hello: "Hola"
+  application:
+    list_of: Lista del %{model}
+    new_model: Nuevo %{model}
+    editing: Editando %{model}
+    back_to: Volver a %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    cruds-Available: CRUDs Disponibles
+    can_not_be_saved: No se pudo guardar
+    select: Seleccione
+    back: Atras
+    this: este
+    
+  messages:
+    success:  
+      successfully_created: creado exitosamente
+      successfully_updated: actualizado con éxito
+      successfully_destroy: eliminado con éxito
+    
+
+  activerecord:
+    attributes:
+      pokemon_trainer:
+        first_name: Nombre
+        last_name: Apellido
+        id_number: Numero identificador
+        level_Type: Tipo de nivel
+        level_Types:
+          high: alto
+          medium: medio
+          low: bajo
+
+    modules:
+      pokemon_trainer:
+        one: Entrenador Pokemon
+        other: Entrenadores Pokemon
+      
+
+    errors:
+      messages:
+        record_invalid: Registro inválido
+      models:
+        content:
+          attributes:
+            title:
+              blank: es requerido
+            description:
+              blank: es requerida
+            start_date:
+              blank: es requerida
+            end_date:
+              blank: es requerida
+
+        appointment:
+          attributes:
+            date:
+              blank: requerida
+            doctor:
+              required: es requerido
+            patient:
+              required: es requerido
+            
+

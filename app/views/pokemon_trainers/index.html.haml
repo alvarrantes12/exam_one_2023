@@ -2,29 +2,33 @@
 .div.m-4
   .page.header
     %h1.mb-4
-      = "Lista de entrenadores"
-    .float-end.pb-4
-      = link_to "Crear", new_pokemon_trainer_path, class: "btn btn-primary"
+      =t('application.list_of', model:t('activerecord.modules.pokemon_trainer.other'))
+    .float-end.pd-4
+      = link_to t('application.create'), new_pokemon_trainer_path, class: "btn btn-primary"
 
   %table.table.table-striped
-    %thead
-      %tr
-        %th= "Nombre"
-        %th= "Apellido"
-        %th= "Region"
-        %th= "Número de identificación"
+    %thread
+      %tr 
+        %th= t('activerecord.attributes.pokemon_trainer.first_name')
+        %th= t('activerecord.attributes.pokemon_trainer.last_name')
+        %th= t('activerecord.attributes.pokemon_trainer.region')
+        %th= t('activerecord.attributes.pokemon_trainer.id_number')
+        %th= t('activerecord.attributes.pokemon_trainer.level_Type')
         %th
         %th
         %th
 
-      - @pokemon_trainers.each do |pokemon_trainer|
+    %tbody
+      -@pokemon_trainers.each do |pokemon_trainer|
         %tr
           %td= pokemon_trainer.first_name
           %td= pokemon_trainer.last_name
           %td= pokemon_trainer.region
           %td= pokemon_trainer.id_number
-          %td= link_to t('application.show'), pokemon_trainer, class: "btn btn-info"
-          %td= link_to t('application.edit'), edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
-          %td= button_to t('application.delete'), pokemon_trainer, method: :delete, class: "btn btn-danger"
-  %br
-
+          %th= t('activerecord.attributes.pokemon_trainer.level_Types')
+          %td= link_to t('application.show'),pokemon_trainer, class: "btn btn-info"
+          %td= link_to t('application.edit'),edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
+          %td= button_to t('application.delete'),(pokemon_trainer), method: :delete, class: "btn btn-danger"
+.row.mt-4
+  .offset-3.col-3 
+    = link_to t('application.back'), root_path, class: "btn btn-secondary btn-block"
