@@ -1,3 +1,4 @@
-%h1 Nuevo Pokemon
-
-= render 'form'
+%h1= t('application.new_model', model: t('activerecord.modules.pokemon_trainer.one'))
+= render 'form', pokemon_trainer: @pokemon_trainer
+%br/
+%div
