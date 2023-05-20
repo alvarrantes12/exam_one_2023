@@ -49,3 +49,11 @@ es:
               taken: La identificacion ya existe
             level:
               blank: No puede estar en blanco
+        captured_pokemon:
+          attributes:
+            location:
+              blank: No puede estar en blanco
+            pokemon:
+              required: El valor digitado no existe
+            pokemon_trainer:
+              required: El valor digitado no existe
