@@ -7,5 +7,5 @@ json.trainer do
 end
 json.pokemon do
     json.id @captured_pokemon.pokemon.id
-    json.name @captured_pokemon.pokemon.name
+    json.name @captured_pokemon.pokemon.nombre
 end
