@@ -1,4 +1,5 @@
 class PokemonTrainer < ApplicationRecord
+    has_many :pokemons, through: :captured_pokemon
 
     validates :first_name, presence: true, length: { maximum: 10 } 
     validates :last_name, presence: true, length: { maximum: 10 }

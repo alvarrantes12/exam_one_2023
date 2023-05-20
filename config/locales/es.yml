@@ -3,7 +3,7 @@ es:
     list_of: Lista de %{model}
     new_model: Nuevo %{model}
     title: Examen David Hidalgo
-    btnTitlePokemon: Ver Entrenadores Pokemon
+    btnTitlePokemonTrainer: Ver Entrenadores Pokemon
     show: Mostrar
     edit: Editar
     save: Guardar
@@ -28,6 +28,8 @@ es:
           medium: Medio
           low: Bajo
         level: Nivel
+      pokemon: 
+        name: Nombre del Pokemon
     modules:
       PokemonTrainer:
         new: Nuevo Entrenador Pokemon
