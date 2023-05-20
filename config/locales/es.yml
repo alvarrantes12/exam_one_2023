@@ -25,9 +25,9 @@ es:
         id_number: Número de identificación
         level: Nivel
         levels:
-          high: "Alto"
-          medium: "Medio"
-          low: "Bajo"
+          high: Alto
+          medium: Medio
+          low: Bajo
     modules:
       pokemon_trainer:
         new: Nuevo entrenador de Pokémon
@@ -51,4 +51,3 @@ es:
               too_short: debe tener al menos %{count} caracteres
             level:
               blank: no puede estar en blanco
-     
