@@ -29,10 +29,14 @@
     .dev.w-25
       = f.text_field :id_number, autofocus: true, class: "form-control"
 
+  .form-group.mx-4
+    = f.label :level, class: "form-label required" # Label para el campo level
+    .dev.w-25
+      = f.select :level, options_for_select(PokemonTrainer.levels.keys.map { |l| [t("activerecord.attributes.pokemon_trainer.levels.#{l}"), l] }), {}, class: "form-control" # Campo de selección para level
 
   .row.mt-4
     .offset-3.col-3
-      = link_to "Atrás", pokemon_trainers_path, class: "btn btn-secondary btn-block"
+      = link_to t('application.back'), pokemon_trainers_path, class: "btn btn-secondary btn-block"
     .col-3
-      = button_tag "Guardar", class: "btn btn-outline-success btn-block"
+      = button_tag t('application.save'), class: "btn btn-outline-success btn-block"
 

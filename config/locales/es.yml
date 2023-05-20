@@ -1,2 +1,23 @@
 es:
-  hello: "Hola"
+  application:
+    save: Guardar
+    delete: Eliminar
+    show: Mostrar
+    edit: Editar
+    create: Crear
+    back: Atrás
+  activerecord:
+    attributes:
+      pokemon_trainer:
+        created: "Entrenador Pokémon creado exitosamente!"
+        updated: "Entrenador Pokémon actualizado exitosamente!"
+        destroyed: "Entrenador Pokémon eliminado exitosamente!"
+        first_name: Nombre
+        last_name: Apellido
+        region: Region
+        id_number: Numero de identificación
+        level: Nivel
+        levels:
+          bajo: "Bajo"
+          medio: "Medio"
+          alto: "Alto"

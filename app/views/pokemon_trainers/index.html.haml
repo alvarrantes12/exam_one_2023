@@ -9,11 +9,11 @@
   %table.table.table-striped
     %thead
       %tr
-        %th= "Nombre"
-        %th= "Apellido"
-        %th= "Region"
-        %th= "Número de identificación"
-        %th
+        %th= t('activerecord.attributes.pokemon_trainer.first_name')
+        %th= t('activerecord.attributes.pokemon_trainer.last_name')
+        %th= t('activerecord.attributes.pokemon_trainer.region')
+        %th= t('activerecord.attributes.pokemon_trainer.id_number')
+        %th= t('activerecord.attributes.pokemon_trainer.level')
         %th
         %th
 
@@ -23,6 +23,7 @@
           %td= pokemon_trainer.last_name
           %td= pokemon_trainer.region
           %td= pokemon_trainer.id_number
+          %td= t("activerecord.attributes.pokemon_trainer.levels.#{pokemon_trainer.level}") # Nueva celda agregada
           %td= link_to t('application.show'), pokemon_trainer, class: "btn btn-info"
           %td= link_to t('application.edit'), edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
           %td= button_to t('application.delete'), pokemon_trainer, method: :delete, class: "btn btn-danger"
