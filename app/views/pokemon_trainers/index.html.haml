@@ -27,4 +27,4 @@
           %td= t("activerecord.attributes.pokemon_trainer.levels.#{pokemon_trainer.level}")
           %td= link_to t('application.show'), pokemon_trainer, class: "btn btn-info"
           %th= link_to t('application.edit'), edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
-          %th= button_to t('application.delete'), pokemon_trainers_path, method: :delete, class: "btn btn-danger"
+          %th= button_to t('application.delete'), pokemon_trainer, method: :delete, class: "btn btn-danger"

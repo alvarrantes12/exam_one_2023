@@ -46,7 +46,7 @@ es:
             level:
               blank: Vacío
     success:
-          trainer:
+          pokemon_trainer:
             create: El entrenador pokemon ha sido creado correctamente
             update: El entrenador pokemon ha sido actualizado correctamente
             delete: El entrenador pokemon ha sido eliminado correctamente
