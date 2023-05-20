@@ -1,5 +1,5 @@
 class PokemonTrainersController < ApplicationController
-  before_action :set_pokemon_trainer, only: %i[ show edit update destroy ]
+  before_action :set_pokemon_trainer, only: %i[show edit update destroy]
 
   def index
     @pokemon_trainers = PokemonTrainer.all
@@ -9,14 +9,19 @@ class PokemonTrainersController < ApplicationController
 
   def new
     @pokemon_trainer = PokemonTrainer.new
+    @pokemons = Pokemon.all
   end
 
   def edit; end
 
   def create
     @pokemon_trainer = PokemonTrainer.new(pokemon_trainer_params)
-
     if @pokemon_trainer.save
+      pokemon_service = PokemonService.new
+      pokemon = pokemon_service.generate_pokemon
+      captured_pokemon = CapturedPokemon.new(pokemon: pokemon, pokemon_trainer: @pokemon_trainer)
+      captured_pokemon.save
+
       redirect_to pokemon_trainer_url(@pokemon_trainer), notice: "Pokemon trainer was successfully created."
     else
       render :new, status: :unprocessable_entity
@@ -31,11 +36,9 @@ class PokemonTrainersController < ApplicationController
     end
   end
 
-
   def destroy
     @pokemon_trainer.destroy
-
-   redirect_to pokemon_trainers_url, notice: "Pokemon trainer was successfully destroyed."
+    redirect_to pokemon_trainers_url, notice: "Pokemon trainer was successfully destroyed."
   end
 
   private
@@ -44,7 +47,8 @@ class PokemonTrainersController < ApplicationController
     @pokemon_trainer = PokemonTrainer.find(params[:id])
   end
 
+
   def pokemon_trainer_params
-    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number)
+    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number, :level)
   end
 end

@@ -1,7 +1,14 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+pokemon_service = PokemonService.new
+
+pokemon_trainer = PokemonTrainer.create(
+  first_name: "Ash",
+  last_name: "Ketchum",
+  region: "Kanto",
+  id_number: "12345678"
+)
+
+pokemon = pokemon_service.generate_pokemon
+pokemon_trainer.pokemon = pokemon
+pokemon_trainer.save
+
+puts t('application.seed_executed')

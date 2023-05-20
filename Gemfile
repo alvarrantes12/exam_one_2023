@@ -16,6 +16,7 @@ gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem 'rack-cors'
 gem 'sass-rails'
+gem "httparty"
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
@@ -36,4 +37,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "shoulda-matchers"
 end

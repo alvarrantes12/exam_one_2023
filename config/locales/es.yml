@@ -10,6 +10,9 @@ es:
     error: "Error"
     save: "Guardar"
     select: "Seleccione"
+    seed_executed: "Seed ejecutada correctamente"
+    cruds: "Cruds Disponibles"
+    contents: "Contenidos"
   activerecord:
     attributes:
       pokemon_trainer:
@@ -28,3 +31,4 @@ es:
           attributes:
             id_number:
               too_short: "es demasiado corto (mínimo %{count} caracteres)"
+              taken: "ya está en uso"
