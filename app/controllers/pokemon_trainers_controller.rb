@@ -14,8 +14,9 @@ class PokemonTrainersController < ApplicationController
   def edit; end
 
   def create
-    @pokemon_trainer = PokemonTrainer.new(pokemon_trainer_params)
 
+    @pokemon_trainer = PokemonTrainer.new(pokemon_trainer_params)
+    PokemonsService.new.build_pokemon
     if @pokemon_trainer.save
       redirect_to pokemon_trainer_url(@pokemon_trainer), notice: "Pokemon trainer was successfully created."
     else
