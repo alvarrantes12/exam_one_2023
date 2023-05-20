@@ -1,2 +1,48 @@
 es:
-  hello: "Hola"
+  application:
+    list_of: Lista del %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    select: Seleccionar
+    cruds_available: CRUDs disponibles
+    back: Atrás
+    save: Guardar
+    created: Creado exitosamente
+    updated: Editado exitosamente
+    deleted: Borrado exitosamente
+    can_not_be_saved: No se pudo guardar
+  activerecord:
+    modules:
+      pokemon_trainer:
+        one: Entrenador pokemon
+        other: Entrenadores pokemon
+    attributes:
+      pokemon_trainer:
+        first_name: Nombre
+        last_name: Apellido
+        id_number: Número de identificación
+        level: Nivel
+        levels:
+          low: Bajo
+          medium: Medio
+          high: Alto
+    errors:
+        models:
+          pokemon_trainer:
+            attributes:
+              first_name:
+                blank: es un campo requerido
+                too_long: es muy largo
+              last_name: 
+                blank: es un campo requerido
+                too_long: es muy largo
+              id_number:
+                blank: es un campo requerido
+                too_long: es muy largo
+                too_short: es muy corto
+              level:
+                blank: es un campo requerido
+
