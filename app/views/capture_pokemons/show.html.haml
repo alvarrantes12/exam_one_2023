@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Locacion:
+  = @capture_pokemon.locacion
+
+= link_to 'Edit', edit_capture_pokemon_path(@capture_pokemon)
+\|
+= link_to 'Back', capture_pokemons_path

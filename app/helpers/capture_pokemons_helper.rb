@@ -1,0 +1,2 @@
+module CapturePokemonsHelper
+end

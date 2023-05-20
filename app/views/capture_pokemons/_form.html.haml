@@ -1,0 +1,13 @@
+= form_for @capture_pokemon do |f|
+  - if @capture_pokemon.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@capture_pokemon.errors.count, "error")} prohibited this capture_pokemon from being saved:"
+      %ul
+        - @capture_pokemon.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :locacion
+    = f.text_field :locacion
+  .actions
+    = f.submit 'Save'
