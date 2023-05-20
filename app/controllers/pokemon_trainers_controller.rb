@@ -23,6 +23,16 @@ class PokemonTrainersController < ApplicationController
     end
   end
 
+  after_create :create_pokemon
+
+  def create_pokemon
+    response = HTTParty.get("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
+    pokemon_names = JSON.parse(response.body)["results"].map { |pokemon| pokemon["name"] }
+    random_pokemon_name = pokemon_names.sample
+
+    self.pokemons.create(name: random_pokemon_name)
+  end
+
   def update
     if @pokemon_trainer.update(pokemon_trainer_params)
       redirect_to pokemon_trainer_url(@pokemon_trainer), notice: "Pokemon trainer was successfully updated."

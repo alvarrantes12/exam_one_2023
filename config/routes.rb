@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   resources :pokemon_trainers
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"'
+  resources :captured_pokemons, only: [:index, :show]
   root "dashboards#index"
 end

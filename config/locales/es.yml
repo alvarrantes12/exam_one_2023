@@ -1,15 +1,29 @@
 es:
-activerecord:
+  application:
+    list_of: Lista del %{model}
+    new_model: Nuevo %{model}
+    edit_model: Editar %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    back: Atrás
+    can_not_be_saved: No se pudo guardar
+    cruds_available: Cruds Disponibles
+    
+  activerecord:
     attributes:
       pokemon_trainer:
         first_name: Nombre
         last_name: Apellido
-        region: Región
-        id_number: Número de ID
+        region: Region
+        id_number: Numero de ID
         level: Nivel
-        levels: Niveles
-        high: Alto
-        medium: Medio
-        low: Bajo
-    models:
-      pokemon_trainer: Entrenador Pokémon
+    modules:
+      pokemon_trainer:
+        one: Entrenador
+        other: Entrenadores
+      pokemon:
+        one: Pokemon
+        other: Pokemons

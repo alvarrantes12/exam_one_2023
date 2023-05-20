@@ -25,6 +25,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "html2haml"
   gem "haml-rails"
+  gem "httparty"
   gem 'rspec-rails'
 end
 
