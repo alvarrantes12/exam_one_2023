@@ -2,17 +2,17 @@
 .div.m-4
   .page.header
     %h1.mb-4
-      = "Lista de entrenadores"
+      = t('application.list')
     .float-end.pb-4
-      = link_to "Crear", new_pokemon_trainer_path, class: "btn btn-primary"
+      = link_to t('application.create'), new_pokemon_trainer_path, class: "btn btn-primary"
 
   %table.table.table-striped
     %thead
       %tr
-        %th= "Nombre"
-        %th= "Apellido"
-        %th= "Region"
-        %th= "Número de identificación"
+        %th= t('activerecord.attributes.pokemon_trainer.first_name')
+        %th= t('activerecord.attributes.pokemon_trainer.last_name')
+        %th= t('activerecord.attributes.pokemon_trainer.region')
+        %th= t('activerecord.attributes.pokemon_trainer.id_number')
         %th
         %th
         %th
@@ -23,6 +23,7 @@
           %td= pokemon_trainer.last_name
           %td= pokemon_trainer.region
           %td= pokemon_trainer.id_number
+          %td= t("activerecord.attributes.pokemon_trainer.levels.#{pokemon_trainer.level}")
           %td= link_to t('application.show'), pokemon_trainer, class: "btn btn-info"
           %td= link_to t('application.edit'), edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
           %td= button_to t('application.delete'), pokemon_trainer, method: :delete, class: "btn btn-danger"
