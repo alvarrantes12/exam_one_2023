@@ -1,4 +1,2 @@
-%h1 Editing pokemon_trainer
-
-= render 'form'
-
+%h1= t('application.edit_model', model: t('activerecord.modules.pokemon_trainer.one'))
+= render "form", pokemon_trainer: @pokemon_trainer
