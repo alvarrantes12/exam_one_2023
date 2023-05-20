@@ -31,4 +31,9 @@ es:
         other: Entrenadores Pokemon
         one: Entrenador Pokemon
     errors:
+      models:
+        captured_pokemon:
+          attributes:
+            pokemon:
+              required: es obligatorio
 
