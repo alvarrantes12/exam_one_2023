@@ -1,2 +1,48 @@
 es:
-  hello: "Hola"
+  application:
+    list_of: Lista de %{model}
+    new_model: Nuevo %{model}
+    edit_model: Editar %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    select: Seleccione
+    can_not_be_saved: El entrenador pokemon no puede ser guardado
+    back: Atras
+    created: Creado exitosamente 
+    updated: Actualizado exitosamente
+    destroyed: Eliminado exitosamente 
+  activerecord:
+    attributes:
+      pokemon_trainer:
+        first_name: Nombre
+        last_name: Apellido
+        region: Region
+        id_number: Numero identificador
+        level: Nivel
+    modules:
+      pokemon_trainer:
+        one: Entrenador pokemon
+        other: Entrenadores pokemon
+
+    errors:
+      models:
+        pokemon_trainer:
+          attributes: 
+            first_name:
+              blank: El campo es requerido
+              too_long: debe tener menos de 10 letras
+            last_name:
+              blank: El campo es requerido
+              too_long: Debe tener menos de 10 letras
+            id_number: 
+              blank: El campo es requerido
+              too_short: Debe tener más de 8 letras
+              too_long: Debe tener menos de 10 letras
+            level:
+              blank: El campo es requerido
+              too_short: Muy corto
+              too_long: Muy largo
+      error: Errores encontrados

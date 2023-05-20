@@ -1,18 +1,28 @@
-%p#notice= notice
-
-%p
-  %b First name:
-  = @pokemon_trainer.first_name
-%p
-  %b Last name:
-  = @pokemon_trainer.last_name
-%p
-  %b Region:
-  = @pokemon_trainer.region
-%p
-  %b Id number:
-  = @pokemon_trainer.id_number
-
-= link_to 'Edit', edit_pokemon_trainer_path(@pokemon_trainer)
-\|
-= link_to 'Back', pokemon_trainers_path
+%p{:style => "color: green"}= notice
+.dif.m-4
+  .page.header
+    %h1.mb-4
+      = t('application.show') 
+      = t('activerecord.modules.pokemon_trainer.one')
+    %p
+      %b= t('activerecord.attributes.pokemon_trainer.first_name') 
+      \:
+      = @pokemon_trainer.first_name
+    %p
+      %b= t('activerecord.attributes.pokemon_trainer.last_name')
+      \:
+      = @pokemon_trainer.last_name
+    %p
+      %b= t('activerecord.attributes.pokemon_trainer.region')
+      \:
+      = @pokemon_trainer.region
+      %p
+      %b= t('activerecord.attributes.pokemon_trainer.id_number')
+      \:
+      = @pokemon_trainer.id_number
+    %p
+      %b= t('activerecord.attributes.pokemon_trainer.level')
+      \:
+      = @pokemon_trainer.level
+    = link_to t('application.back'), pokemon_trainers_path, class: "btn btn-secondary btn-block"
+    = link_to t('application.edit'), edit_pokemon_trainer_path(@pokemon_trainer), class: "btn btn-success"
