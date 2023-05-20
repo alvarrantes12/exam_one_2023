@@ -28,6 +28,11 @@
     = f.label :id_number, class: "form-label required"
     .dev.w-25
       = f.text_field :id_number, autofocus: true, class: "form-control"
+  
+  .form-group.mx-4
+    = f.label :level, class: "form-label required"
+    .div.w-25
+      = f.select(:level, options_for_select(levels, @pokemon_trainer.level), {prompt: t('application.select')}, class: "form_control")
 
 
   .row.mt-4
