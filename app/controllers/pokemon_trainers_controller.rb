@@ -17,6 +17,7 @@ class PokemonTrainersController < ApplicationController
     @pokemon_trainer = PokemonTrainer.new(pokemon_trainer_params)
 
     if @pokemon_trainer.save
+      PokemonsService.new.build_pokemon
       redirect_to pokemon_trainer_url(@pokemon_trainer), notice:  t('application.create_message', model: t('activerecord.modules.pokemon_trainer.one'))
     else
       render :new, status: :unprocessable_entity
