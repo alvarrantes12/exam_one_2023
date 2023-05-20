@@ -5,7 +5,7 @@ RSpec.describe PokemonTrainer, type: :model do
     described_class.new(first_name:"Jonathan",
                           last_name: "Salazar2",
                           region: "Grecia",
-                          id_number: 123)
+                          id_number: 12345678)
   }
   it "is valid with valid attributes" do
     expect(subject).to be_valid

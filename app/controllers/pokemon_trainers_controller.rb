@@ -14,9 +14,11 @@ class PokemonTrainersController < ApplicationController
   def edit; end
 
   def create
+    
     @pokemon_trainer = PokemonTrainer.new(pokemon_trainer_params)
 
     if @pokemon_trainer.save
+      PokemonsService.new.build_pokemon
       redirect_to pokemon_trainer_url(@pokemon_trainer), notice: "Pokemon trainer was successfully created."
     else
       render :new, status: :unprocessable_entity
@@ -45,6 +47,6 @@ class PokemonTrainersController < ApplicationController
   end
 
   def pokemon_trainer_params
-    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number)
+    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number, :special_level)
   end
 end
