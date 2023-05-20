@@ -1,2 +1,53 @@
 es:
-  hello: "Hola"
+  application:
+    list_of: Lista de %{model}
+    new_model: Nuevo %{model}
+    edit_model: Editar %{model}
+    show_model: Mostrar %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    cruds_available: CRUDs disponibles
+    can_not_be_saved: No se pudo guardar
+    select: Seleccione
+    back: Atrás
+  activerecord:
+    attributes:
+      trainer:
+        first_name: Primer nombre
+        last_name: Apellido
+        region: Región
+        id_number: Número de indentificación
+        level: Nivel
+        levels:
+          low: Bajo
+          mid: Medio
+          high: Alto
+    modules:
+      trainer:
+        one: Entrenador
+        other: Entrenadores
+    errors:
+      models:
+        trainer:
+          attributes:
+            first_name:
+              blank: vacío
+              too_short: muy corto
+            last_name:
+              blank: vacío
+              too_short: muy corto
+            id_number:
+              blank: vacío
+              too_short: muy corto
+              too_long: muy largo
+              taken: en uso
+            level:
+              blank: vacío
+    success:
+      owner:
+        create: El entrenador ha sido creado correctamente
+        update: El entrenador ha sido actualizado correctamente
+        delete: El entrenador ha sido eliminado correctamente

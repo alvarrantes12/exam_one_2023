@@ -1,18 +1,27 @@
+%h1= t('application.show_model', model: t('activerecord.modules.trainer.one'))
 %p#notice= notice
 
-%p
-  %b First name:
-  = @pokemon_trainer.first_name
-%p
-  %b Last name:
-  = @pokemon_trainer.last_name
-%p
-  %b Region:
-  = @pokemon_trainer.region
-%p
-  %b Id number:
-  = @pokemon_trainer.id_number
+.div.m-4
+  .card
+    .card-body
+      %h5.card-title
+        = t('activerecord.attributes.trainer.first_name')
+      %p.card-text= @pokemon_trainer.first_name
+      %h5.card-title
+        = t('activerecord.attributes.trainer.last_name')
+      %p.card-text= @pokemon_trainer.last_name
+      %h5.card-title
+        = t('activerecord.attributes.trainer.region')
+      %p.card-text= @pokemon_trainer.last_name
+      %h5.card-title
+        = t('activerecord.attributes.trainer.id_number')
+      %p.card-text= @pokemon_trainer.id_number
+      %h5.card-title
+        = t('activerecord.attributes.trainer.level')
+      %p.card-text= @pokemon_trainer.level
 
-= link_to 'Edit', edit_pokemon_trainer_path(@pokemon_trainer)
-\|
-= link_to 'Back', pokemon_trainers_path
+.row.mt-4
+  .offset-3.col-3
+    = link_to t('application.back'), pokemon_trainers_path, class: "btn btn-secondary"
+  .col-3
+    = link_to t('application.edit'), edit_pokemon_trainer_path(@pokemon_trainer), class: "btn btn-success"
