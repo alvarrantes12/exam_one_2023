@@ -1,0 +1,30 @@
+%p{:style => "color: green"}= notice
+.div.m-4
+  .page.header
+    %h1.mb-4
+      = "Lista de entrenadores"
+    .float-end.pb-4
+      = link_to "Crear", new_pokemon_trainer_path, class: "btn btn-primary"
+
+  %table.table.table-striped
+    %thead
+      %tr
+        %th= "Nombre"
+        %th= "Apellido"
+        %th= "Region"
+        %th= "Número de identificación"
+        %th
+        %th
+        %th
+
+      - @pokemon_trainers.each do |pokemon_trainer|
+        %tr
+          %td= pokemon_trainer.first_name
+          %td= pokemon_trainer.last_name
+          %td= pokemon_trainer.region
+          %td= pokemon_trainer.id_number
+          %td= link_to t('application.show'), pokemon_trainer, class: "btn btn-info"
+          %td= link_to t('application.edit'), edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
+          %td= button_to t('application.delete'), pokemon_trainer, method: :delete, class: "btn btn-danger"
+  %br
+

@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b First name:
+  = @pokemon_trainer.first_name
+%p
+  %b Last name:
+  = @pokemon_trainer.last_name
+%p
+  %b Region:
+  = @pokemon_trainer.region
+%p
+  %b Id number:
+  = @pokemon_trainer.id_number
+
+= link_to 'Edit', edit_pokemon_trainer_path(@pokemon_trainer)
+\|
+= link_to 'Back', pokemon_trainers_path
