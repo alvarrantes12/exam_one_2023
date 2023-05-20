@@ -13,7 +13,7 @@
         %th= "Apellido"
         %th= "Region"
         %th= "Número de identificación"
-        %th
+        %th= "Nivel"
         %th
         %th
 
@@ -23,6 +23,7 @@
           %td= pokemon_trainer.last_name
           %td= pokemon_trainer.region
           %td= pokemon_trainer.id_number
+          %td= t("pokemon_trainers.levels.#{pokemon_trainer.level}")
           %td= link_to t('application.show'), pokemon_trainer, class: "btn btn-info"
           %td= link_to t('application.edit'), edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
           %td= button_to t('application.delete'), pokemon_trainer, method: :delete, class: "btn btn-danger"

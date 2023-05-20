@@ -1,2 +1,15 @@
 es:
-  hello: "Hola"
+activerecord:
+    attributes:
+      pokemon_trainer:
+        first_name: Nombre
+        last_name: Apellido
+        region: Región
+        id_number: Número de ID
+        level: Nivel
+        levels: Niveles
+        high: Alto
+        medium: Medio
+        low: Bajo
+    models:
+      pokemon_trainer: Entrenador Pokémon
