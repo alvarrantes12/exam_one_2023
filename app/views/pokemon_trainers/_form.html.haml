@@ -33,7 +33,12 @@
     = f.label :level, class: "form-label required"
     .div.w-25
       = f.select(:level, options_for_select(levels, @pokemon_trainer.level), {prompt: t('application.select')}, class: "form-control")
-      
+
+  .form-group.mx-4
+    = f.label :captured_pokemon, class: "form-label required"
+    .div.w-25
+      = f.select(:captured_pokemon_id, options_for_select(@captured_pokemons, @pokemon_trainer.captured_pokemon), {prompt: t('application.select')}, class: "form-control")
+
   .row.mt-4
     .offset-3.col-3
       = link_to t('application.back'), pokemon_trainers_path, class: "btn btn-secondary btn-block"

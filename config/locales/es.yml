@@ -27,10 +27,14 @@ es:
           high: Alto
           medium: Medio
           low: Bajo
+        captured_pokemon: Captura de pokemon
     modules:
       pokemon_trainer:
         one: Entrenador pokemon
         other: Entrenadores pokemon
+      captured_pokemon: 
+        one: Captura de pokemon
+        other: Capturas de pokemones
     errors:
       models:
         pokemon_trainer:
@@ -45,6 +49,8 @@ es:
               blank: está en blanco
               too_short: debe de ser de más de 8 caracteres
               too_long: debe de ser de menos de 10 caracteres
+              taken: debe ser único
             level:
               blank: está en blanco
-  hello: "Hola"
+            captured_pokemon:
+              blank: está en blanco

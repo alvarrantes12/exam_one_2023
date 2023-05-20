@@ -20,6 +20,9 @@
       %h5.card-title
         = t('activerecord.attributes.pokemon_trainer.level')
       %p.card-text= t("activerecord.attributes.pokemon_trainer.levels.#{@pokemon_trainer.level}")
+      %h5.card-title
+        = t('activerecord.attributes.pokemon_trainer.captured_pokemon')
+      %p.card-text= @pokemon_trainer.captured_pokemon
 
 .row.mt-4
   .offset-3.col-3

@@ -1,5 +1,6 @@
 class PokemonTrainersController < ApplicationController
   before_action :set_pokemon_trainer, only: %i[ show edit update destroy ]
+  before_action :set_captured_pokemon
 
   def index
     @pokemon_trainers = PokemonTrainer.all
@@ -17,6 +18,7 @@ class PokemonTrainersController < ApplicationController
     @pokemon_trainer = PokemonTrainer.new(pokemon_trainer_params)
 
     if @pokemon_trainer.save
+      PokemonsService.new.build_pokemon
       redirect_to pokemon_trainer_url(@pokemon_trainer), notice: t('application.created')
     else
       render :new, status: :unprocessable_entity
@@ -41,12 +43,15 @@ class PokemonTrainersController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   private
+    def set_captured_pokemon
+      @captured_pokemons = CapturedPokemon.all.map {|captured_pokemon| ["#{captured_pokemon.location}", captured_pokemon.id]}
+    end
 
-  def set_pokemon_trainer
-    @pokemon_trainer = PokemonTrainer.find(params[:id])
-  end
+    def set_pokemon_trainer
+      @pokemon_trainer = PokemonTrainer.find(params[:id])
+    end
 
-  def pokemon_trainer_params
-    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number, :level)
-  end
+    def pokemon_trainer_params
+      params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number, :level, :captured_pokemon_id)
+    end
 end
