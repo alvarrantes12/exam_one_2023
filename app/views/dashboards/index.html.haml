@@ -1,6 +1,12 @@
 .div.m-4
   %h1.mb-4
-    = "Crud disponibles"
+    = t('application.title')
 
 .float-start.m-4
-  = link_to "Contenidos", root_path, class: 'btn btn-danger'
+  = link_to t('application.btnTitlePokemon'), pokemon_trainers_path, class: 'btn btn-danger'
+
+.float-start.m-4
+  = link_to "Eventos", root_path, class: 'btn btn-success'
+
+.float-start.m-4
+  = link_to "Historial", root_path, class: 'btn btn-primary'
