@@ -10,6 +10,8 @@ es:
     create: Crear
     back: Atrás
     can_not_be_saved: No se pudo guardar
+    cruds_available: Cruds Disponibles
+    
   activerecord:
     attributes:
       pokemon_trainer:
@@ -22,8 +24,25 @@ es:
       pokemon_trainer:
         one: Entrenador
         other: Entrenadores
+      pokemon:
+        one: Pokemon
+        other: Pokemons
     errors:
       models:
+        captured_pokemon:
+          attributes:
+            location:
+              blank: es un campo requerido
+              too_short: es muy corto
+              too_long: es muy largo
+            pokemon_trainer: 
+              required: es un campo requerido
+              too_short: es muy corto
+              too_long: es muy largo
+            pokemon:
+              required: es un campo requerido
+              too_short: es muy corto
+              too_long: es muy largo
         pokemon_trainer:
           attributes:
             first_name:
