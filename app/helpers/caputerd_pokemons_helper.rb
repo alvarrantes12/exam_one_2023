@@ -1,0 +1,2 @@
+module CaputerdPokemonsHelper
+end

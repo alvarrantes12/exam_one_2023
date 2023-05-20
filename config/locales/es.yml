@@ -48,4 +48,6 @@ es:
               blank: "Falta la region"
             id_number: 
               blank: "Falta el identifiacion"
+              too_short: muy corto debe ser mayor a 3 letras
+              too_long: demasiado largo
               
