@@ -15,6 +15,7 @@ es:
     created_model: Creado %{model} correctamente
     edited_model: Editado %{model} correctamente
     deleted_model: Eliminado %{model} correctamente
+    CRUDs_available: CRUDs disponibles
   activerecord:
     modules:
       pokemon_trainer:
