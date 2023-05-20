@@ -1,1 +1,3 @@
-json.array! @captured_pokemons, partial: "captured_pokemons/captured_pokemon", as: :captured_pokemon
+json.extract! CapturedPokemon, :id, :first_name, :last_name, :created_at, :updated_at
+json.url capturedpokemon_url(CapturedPokemon, format: :json)
+

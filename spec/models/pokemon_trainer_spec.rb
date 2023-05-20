@@ -7,7 +7,7 @@ RSpec.describe PokemonTrainer, type: :model do
                         region: "Costa Rica"
                         id_number: 11111111,
                         level: 2,
-                        CAMBIAR AHORA manager: Manager.create(first_name: "David", last_name: "Hidalgo"))
+                        captured_pokemon: CapturedPokemon.create(first_name: "Emily", last_name: "Murillo"))
   }
 
   it "valid with valid attributes" do
@@ -44,7 +44,7 @@ RSpec.describe PokemonTrainer, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with a last_name with more than 15 letters" do
+  it "is not valid with a last_name with more than 10 letters" do
     subject.last_name = "rrrrrrrrrrrrrrrr"
     expect(subject).to_not be_valid
   end
