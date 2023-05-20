@@ -1,2 +1,54 @@
 es:
-  hello: "Hola"
+  application:
+    list_of: Lista de %{model}
+    new_model: Nuevo %{model}
+    btnTitle: Ver entrenadores
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    back: Atrás
+    delete: Eliminar
+    create: Crear
+    edited: Actualizado correctamente
+    destroyed: Borrado correctamente
+    select: Seleccione
+    error: Error
+    created: Creado correctamente
+    cruds_available: Temas disponibles
+    can_not_be_saved: No se pudo guardar
+  activerecord:
+    attributes:
+      pokemon_trainer:
+        first_name: Nombre
+        last_name: Apellido
+        region: Región
+        id_number: Número de identificación
+        level: Nivel
+        levels:
+          high: "Alto"
+          medium: "Medio"
+          low: "Bajo"
+    modules:
+      pokemon_trainer:
+        new: Nuevo entrenador de Pokémon
+        edit: Editando entrenador de Pokémon
+        one: Entrenador de Pokémon
+        other: Entrenadores de Pokémon
+    errors:
+      models:
+        pokemon_trainer:
+          attributes:
+            first_name:
+              blank: no puede estar en blanco
+              too_long: debe tener como máximo %{count} caracteres
+            last_name:
+              blank: no puede estar en blanco
+              too_long: debe tener como máximo %{count} caracteres
+            region:
+              blank: no puede estar en blanco
+            id_number:
+              blank: no puede estar en blanco
+              too_short: debe tener al menos %{count} caracteres
+            level:
+              blank: no puede estar en blanco
+     
