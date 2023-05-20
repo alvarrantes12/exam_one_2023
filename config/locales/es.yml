@@ -1,2 +1,34 @@
 es:
-  hello: "Hola"
+  application:
+    list_of: Lista de %{model}
+    new_model: Nuevo %{model}
+    create: Crear
+    show: Mostrar
+    edit: Editar
+    delete: Eliminar
+    created: Creado exitosamente
+    updated: Editado exitosamente
+    destroyed: Eliminado exitosamente
+    cruds_avaibles: CRUDs disponibles
+    can_not_be_saved: No se pudo guardar
+    back: Atrás
+    save: Guardar
+    select: Seleccionar
+  activerecord:
+    attributes:
+      pokemon_trainer:
+        first_name: Nombre
+        last_name: Apellido
+        region: Región
+        id_number: Número de Identificación
+        level: Nivel
+        levels:
+          high: Alto
+          medium: Medio
+          low: Bajo
+    modules:
+      pokemon_trainer:
+        other: Entrenadores Pokemon
+        one: Entrenador Pokemon
+    errors:
+
