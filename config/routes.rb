@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :captured_pokemons
+  resources :pokemons
   resources :pokemon_trainers
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
